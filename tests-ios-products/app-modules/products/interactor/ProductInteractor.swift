@@ -17,7 +17,7 @@ class ProductInteractor: PresenterToInteractorProtocol {
         Alamofire.request(API_PRODUCT_LIST).responseJSON { response in
             if let statusCode = response.response?.statusCode, statusCode < 300 {
                 if let json = response.result.value as AnyObject? {
-                    let arrayResponse = json["product_list"] as! NSArray
+                    let arrayResponse = json["data"] as! NSArray
                     let arrayObject = Mapper<ProductModel>().mapArray(JSONArray: arrayResponse as! [[String: Any]])
                     self.presenter?.productFetchedSuccess(productModelArray: arrayObject)
                 }

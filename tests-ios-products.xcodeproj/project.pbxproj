@@ -10,6 +10,7 @@
 		9A32D64723FF1C08006798A2 /* MoneyExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A32D64623FF1C08006798A2 /* MoneyExtensions.swift */; };
 		9A32D64923FF1E6B006798A2 /* ViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A32D64823FF1E6B006798A2 /* ViewControllerExtensions.swift */; };
 		9A32D64B23FF2387006798A2 /* ProductRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A32D64A23FF2387006798A2 /* ProductRouter.swift */; };
+		9A32D64D23FF3266006798A2 /* ProgressIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A32D64C23FF3266006798A2 /* ProgressIndicator.swift */; };
 		9A77505023F996D9004D760A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A77504F23F996D9004D760A /* AppDelegate.swift */; };
 		9A77505223F996D9004D760A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A77505123F996D9004D760A /* SceneDelegate.swift */; };
 		9A77505423F996D9004D760A /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A77505323F996D9004D760A /* ProductViewController.swift */; };
@@ -49,6 +50,7 @@
 		9A32D64623FF1C08006798A2 /* MoneyExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyExtensions.swift; sourceTree = "<group>"; };
 		9A32D64823FF1E6B006798A2 /* ViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtensions.swift; sourceTree = "<group>"; };
 		9A32D64A23FF2387006798A2 /* ProductRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRouter.swift; sourceTree = "<group>"; };
+		9A32D64C23FF3266006798A2 /* ProgressIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressIndicator.swift; sourceTree = "<group>"; };
 		9A77504C23F996D9004D760A /* tests-ios-products.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tests-ios-products.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A77504F23F996D9004D760A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9A77505123F996D9004D760A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -278,6 +280,7 @@
 		9A96559123F99F7800A7A77A /* ui-utils */ = {
 			isa = PBXGroup;
 			children = (
+				9A32D64C23FF3266006798A2 /* ProgressIndicator.swift */,
 			);
 			path = "ui-utils";
 			sourceTree = "<group>";
@@ -480,6 +483,7 @@
 				9A32D64923FF1E6B006798A2 /* ViewControllerExtensions.swift in Sources */,
 				9A96559923FA33EC00A7A77A /* ProductProtocol.swift in Sources */,
 				9ACCBA2B23FB830C007AB192 /* ProductInteractor.swift in Sources */,
+				9A32D64D23FF3266006798A2 /* ProgressIndicator.swift in Sources */,
 				9A77505423F996D9004D760A /* ProductViewController.swift in Sources */,
 				9A32D64B23FF2387006798A2 /* ProductRouter.swift in Sources */,
 				9ACCBA2923FB823A007AB192 /* ProductPresenter.swift in Sources */,
