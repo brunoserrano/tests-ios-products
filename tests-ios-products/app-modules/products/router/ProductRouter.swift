@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProductRouter: PresenterToRouterProtocol {
+class ProductRouter: ProductPresenterToRouterProtocol {
     static func createModule() -> ProductViewController {
         let viewController = storyboard.instantiateViewController(identifier: "ProductViewController") as! ProductViewController
         

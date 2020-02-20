@@ -10,7 +10,7 @@ import UIKit
 
 class ProductViewController: UIViewController {
     
-    var presenter: ViewToPresenterProtocol?
+    var presenter: ProductViewToPresenterProtocol?
 
     @IBOutlet var productTableView: UITableView!
     var productArrayList: Array<ProductModel> = Array()
@@ -35,14 +35,14 @@ class ProductViewController: UIViewController {
     }
 }
 
-extension ProductViewController: PresenterToViewProtocol {
-    func showProduct(productArray: Array<ProductModel>) {
+extension ProductViewController: ProductPresenterToViewProtocol {
+    func showProducts(productArray: Array<ProductModel>) {
         self.productArrayList = productArray
         self.productTableView.reloadData()
         self.hideProgressIndicator(view: self.view)
     }
     
-    func showError() {
+    func showFetchError() {
         self.hideProgressIndicator(view: self.view)
         let alert = UIAlertController(title: "Oops!", message: "Unable to fetch products.", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Try again", style: .default, handler: { _ in self.fetchProducts()}))
@@ -72,11 +72,9 @@ extension ProductViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         presenter?.showDetailController(navigationController: self.navigationController!)
     }
 }
 
-class ProductCell: UITableViewCell {
-    
-}
-
+class ProductCell: UITableViewCell { }

@@ -8,12 +8,12 @@
 
 import UIKit
 
-class ProductPresenter: ViewToPresenterProtocol {
-    var view: PresenterToViewProtocol?
+class ProductPresenter: ProductViewToPresenterProtocol {
+    var view: ProductPresenterToViewProtocol?
     
-    var interactor: PresenterToInteractorProtocol?
+    var interactor: ProductPresenterToInteractorProtocol?
     
-    var router: PresenterToRouterProtocol?
+    var router: ProductPresenterToRouterProtocol?
     
     func startFetchingProduct() {
         interactor?.fetchProduct()
@@ -24,12 +24,12 @@ class ProductPresenter: ViewToPresenterProtocol {
     }
 }
 
-extension ProductPresenter: InteractorToPresenterProtocol {
+extension ProductPresenter: ProductInteractorToPresenterProtocol {
     func productFetchedSuccess(productModelArray: Array<ProductModel>) {
-        view?.showProduct(productArray: productModelArray)
+        view?.showProducts(productArray: productModelArray)
     }
     
     func productFetchFailed() {
-        view?.showError()
+        view?.showFetchError()
     }
 }

@@ -10,8 +10,8 @@ import Foundation
 import Alamofire
 import ObjectMapper
 
-class ProductInteractor: PresenterToInteractorProtocol {
-    var presenter: InteractorToPresenterProtocol?
+class ProductInteractor: ProductPresenterToInteractorProtocol {
+    var presenter: ProductInteractorToPresenterProtocol?
     
     func fetchProduct() {
         Alamofire.request(API_PRODUCT_LIST).responseJSON { response in

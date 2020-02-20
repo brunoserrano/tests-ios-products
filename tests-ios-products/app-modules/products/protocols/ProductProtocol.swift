@@ -8,32 +8,32 @@
 
 import UIKit
 
-protocol ViewToPresenterProtocol: class{
+protocol ProductViewToPresenterProtocol: class {
     
-    var view: PresenterToViewProtocol? {get set}
-    var interactor: PresenterToInteractorProtocol? {get set}
-    var router: PresenterToRouterProtocol? {get set}
+    var view: ProductPresenterToViewProtocol? {get set}
+    var interactor: ProductPresenterToInteractorProtocol? {get set}
+    var router: ProductPresenterToRouterProtocol? {get set}
     func startFetchingProduct()
     func showDetailController(navigationController: UINavigationController)
     
 }
 
-protocol PresenterToViewProtocol: class {
-    func showProduct(productArray: Array<ProductModel>)
-    func showError()
+protocol ProductPresenterToViewProtocol: class {
+    func showProducts(productArray: Array<ProductModel>)
+    func showFetchError()
 }
 
-protocol PresenterToRouterProtocol: class {
+protocol ProductPresenterToRouterProtocol: class {
     static func createModule() -> ProductViewController
     func pushToDetailScreen(navigationController: UINavigationController)
 }
 
-protocol PresenterToInteractorProtocol: class {
-    var presenter: InteractorToPresenterProtocol? {get set}
+protocol ProductPresenterToInteractorProtocol: class {
+    var presenter: ProductInteractorToPresenterProtocol? {get set}
     func fetchProduct()
 }
 
-protocol InteractorToPresenterProtocol: class {
+protocol ProductInteractorToPresenterProtocol: class {
     func productFetchedSuccess(productModelArray: Array<ProductModel>)
     func productFetchFailed()
 }
