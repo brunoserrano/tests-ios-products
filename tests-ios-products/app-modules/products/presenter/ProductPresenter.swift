@@ -19,8 +19,8 @@ class ProductPresenter: ProductViewToPresenterProtocol {
         interactor?.fetchProduct()
     }
     
-    func showDetailController(navigationController: UINavigationController) {
-        router?.pushToDetailScreen(navigationController: navigationController)
+    func showDetailController(product: ProductModel, navigationController: UINavigationController) {
+        router?.pushToDetailScreen(product: product, navigationController: navigationController)
     }
 }
 

@@ -14,7 +14,7 @@ protocol ProductViewToPresenterProtocol: class {
     var interactor: ProductPresenterToInteractorProtocol? {get set}
     var router: ProductPresenterToRouterProtocol? {get set}
     func startFetchingProduct()
-    func showDetailController(navigationController: UINavigationController)
+    func showDetailController(product: ProductModel, navigationController: UINavigationController)
     
 }
 
@@ -25,7 +25,7 @@ protocol ProductPresenterToViewProtocol: class {
 
 protocol ProductPresenterToRouterProtocol: class {
     static func createModule() -> ProductViewController
-    func pushToDetailScreen(navigationController: UINavigationController)
+    func pushToDetailScreen(product: ProductModel, navigationController: UINavigationController)
 }
 
 protocol ProductPresenterToInteractorProtocol: class {

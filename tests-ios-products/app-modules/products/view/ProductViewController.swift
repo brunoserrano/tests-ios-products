@@ -73,7 +73,8 @@ extension ProductViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        presenter?.showDetailController(navigationController: self.navigationController!)
+        presenter?.showDetailController(product: productArrayList[indexPath.row],
+                                        navigationController: self.navigationController!)
     }
 }
 

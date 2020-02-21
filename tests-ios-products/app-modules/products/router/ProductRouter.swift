@@ -29,7 +29,8 @@ class ProductRouter: ProductPresenterToRouterProtocol {
         return UIStoryboard(name:"Main", bundle: .main)
     }
     
-    func pushToDetailScreen(navigationController: UINavigationController) {
-        // TODO: Go to details screen
+    func pushToDetailScreen(product: ProductModel, navigationController: UINavigationController) {
+        let detailsView = ProductDetailsRouter.createModule(product: product)
+        navigationController.pushViewController(detailsView, animated: true)
     }
 }
